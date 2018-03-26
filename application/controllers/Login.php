@@ -36,6 +36,13 @@ class Login extends CI_Controller{
 		}
 	}
  
+ function register_user(){
+ 
+      $user=array(
+      'user_name'=>$this->input->post('username'),
+      'user_password'=>md5($this->input->post('password')),
+        );
+}		
 	function logout(){
 		$this->session->sess_destroy();
 		redirect(base_url('login'));
