@@ -52,6 +52,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url(); ?>index.php/Login">Login</a>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Registrasi</title>
 </head>
 <body>
-	<h1>LOGIN</h1>
-	<form action="<?php echo base_url('login/aksi_login'); ?>" method="post">		
+	<h1>REGISTRASI</h1>
+	<form action="<?php echo base_url('regis/register_user'); ?>" method="post">		
 		<table>
 			<tr>
 				<td>Username</td>
@@ -17,10 +17,10 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="Login"></td>
+				<td><input type="submit" value="Register"></td>
 			</tr>
 		</table>
 	</form>
-	<a href="<?php echo base_url('regis'); ?>">?Register?</a>
+	<a href = "<?php echo base_url('login'); ?>">Login?</a>
 </body>
 </html>
