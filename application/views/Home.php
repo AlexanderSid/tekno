@@ -283,6 +283,44 @@
         </div>
       </div>
     </section>
+<!------------------------------table------------------------------->
+<section id="table">
+<h2 style="text-align:center;">DATA STATISTIK PENGUNJUNG WEB TEKINFOITS.TK</h2>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pengunjung";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM pengunjung";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>Tahun</th><th>Asia</th><th>America</th><th>Europe</th><th>Rusia</th><th>Afrika</th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["tahun"]."</td><td>".$row["asia"]." </td><td>".$row["america"]." </td><td>".$row["europe"]." </td><td>".$row["rusia"]." </td><td>".$row["africa"]." </td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+<div class="wrapper">
+<form action="<?php echo base_url('download'); ?>">
+<input  type="submit" value="Download Excel">
+</div>
+</form>
+
+    </section>
 
     
 
