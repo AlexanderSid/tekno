@@ -50,4 +50,7 @@ class Login extends CI_Controller{
 		function download(){
 		$this->load->view('v_download');
 	}
+	function statistik(){
+		$this->load->view('statistik');
+	}
 }
