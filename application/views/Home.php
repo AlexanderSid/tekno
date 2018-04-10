@@ -317,7 +317,8 @@ $conn->close();
 <div class="wrapper">
 <form action="<?php echo base_url(); ?>index.php/Login/download">
 <input  type="submit" value="Download Excel">
-</div>
+<a href="<?php echo base_url(); ?>index.php/Login/statistik">Lihat Chart </a>
+	</div>
 </form>
 
     </section>
