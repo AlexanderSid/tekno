@@ -315,7 +315,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 <div class="wrapper">
-<form action="<?php echo base_url('download'); ?>">
+<form action="<?php echo base_url(); ?>index.php/Login/download">
 <input  type="submit" value="Download Excel">
 </div>
 </form>
